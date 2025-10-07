@@ -277,7 +277,9 @@ encoded_sequences = [
 ]
 ```
 
-This is a list of encoded sequences: a list of lists. Tensors only accept rectangular shapes (think matrices). This "array" is already of rectangular shape, so converting it to a tensor is easy:
+This is a list of encoded sequences: a list of lists.
+Tensors only accept rectangular shapes (think matrices).
+Since the inner lists have different lengths, this array is not yet rectangular, so we need to pad the shorter ones before converting it to a tensor.
 
 ```py
 import torch
